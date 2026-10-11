@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vœux de stage — Darty Île-de-France</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,520;8..60,650&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: "#1c1917",
+              paper: "#f3efe6",
+              card: "#fffcf7",
+              line: "#e3d9cc",
+              accent: "#9a3412",
+            },
+            fontFamily: {
+              sans: ["Source Sans 3", "system-ui", "sans-serif"],
+              serif: ["Source Serif 4", "Georgia", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .suggest-active {
+        background: #f6e4d8;
+      }
+      .rank-over {
+        outline: 2px dashed #9a3412;
+        outline-offset: 2px;
+      }
+      #store-map,
+      #depart-map {
+        height: 28rem;
+      }
+      #result-map {
+        height: 20rem;
+      }
+      .leaflet-container {
+        z-index: 0;
+        height: 100%;
+        width: 100%;
+        font-family: "Source Sans 3", system-ui, sans-serif;
+      }
+      .pin-wrap {
+        background: transparent;
+        border: none;
+      }
+      .map-pin {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 28px;
+        border-radius: 999px;
+        border: 2px solid #1c1917;
+        background: #fffcf7;
+        font-size: 12px;
+        font-weight: 700;
+        box-shadow: 0 1px 2px rgb(28 25 23 / 0.25);
+      }
+      .map-pin-on {
+        background: #9a3412;
+        border-color: #7c2d12;
+        color: white;
+      }
+      .map-pin-dim {
+        opacity: 0.35;
+      }
+      .map-house {
+        display: block;
+        width: 16px;
+        height: 14px;
+        margin: 3px;
+        background: #fffcf7;
+        border: 2px solid #1c1917;
+        border-radius: 1px;
+        box-shadow: 0 1px 2px rgb(28 25 23 / 0.25);
+        position: relative;
+      }
+      .map-house::before {
+        content: "";
+        position: absolute;
+        left: 1px;
+        top: -7px;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-bottom: 7px solid #1c1917;
+      }
+      .map-house-on {
+        background: #9a3412;
+        border-color: #7c2d12;
+      }
+      .map-house-on::before {
+        border-bottom-color: #7c2d12;
+      }
+      .map-house-train {
+        background: #93c5fd;
+        border-color: #1e3a8a;
+      }
+      .map-house-train::before {
+        border-bottom-color: #1e3a8a;
+      }
+      .map-house-car {
+        background: #fdba74;
+        border-color: #9a3412;
+      }
+      .map-house-car::before {
+        border-bottom-color: #9a3412;
+      }
+      .map-popup {
+        font-size: 14px;
+        line-height: 1.35;
+      }
+      .map-popup button {
+        margin-top: 8px;
+        border: 1px solid #e3d9cc;
+        border-radius: 6px;
+        padding: 4px 8px;
+        background: white;
+        font-weight: 600;
+      }
+      .map-popup button:disabled {
+        opacity: 0.4;
+      }
+      .hist {
+        display: flex;
+        align-items: flex-end;
+        gap: 4px;
+        height: 9rem;
+        margin-top: 12px;
+      }
+      .hist-col {
+        display: flex;
+        flex: 1 1 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        height: 100%;
+        min-width: 0;
+      }
+      .hist-bar {
+        width: 100%;
+        min-height: 2px;
+        border-radius: 3px 3px 0 0;
+        background: #9a3412;
+      }
+      .hist-n,
+      .hist-label {
+        font-size: 10px;
+        line-height: 1.2;
+        color: #57534e;
+      }
+      .hist-label {
+        text-align: center;
+      }
+      .tabs {
+        display: flex;
+        gap: 0.25rem;
+        margin-bottom: 1.5rem;
+        border-bottom: 1px solid #e3d9cc;
+      }
+      .tab {
+        margin-bottom: -1px;
+        border: 1px solid transparent;
+        border-radius: 0.5rem 0.5rem 0 0;
+        padding: 0.6rem 1rem;
+        background: transparent;
+        font-weight: 600;
+        color: #57534e;
+      }
+      .tab-on {
+        border-color: #e3d9cc;
+        border-bottom-color: #fffcf7;
+        background: #fffcf7;
+        color: #9a3412;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-paper font-sans text-ink antialiased">
+    <header class="border-b border-line bg-card">
+      <div class="mx-auto flex max-w-6xl items-end justify-between gap-4 px-4 py-5">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-[0.16em] text-accent">Stage en magasin</p>
+          <h1 class="font-serif text-3xl leading-tight">Stage Darty Île-de-France</h1>
+        </div>
+        <p id="phase-label" class="shrink-0 rounded-full border border-line px-3 py-1 text-sm text-stone-600"></p>
+      </div>
+    </header>
+    <main id="app" class="mx-auto max-w-6xl px-4 py-8"></main>
+    <noscript>
+      <p class="mx-auto max-w-5xl px-4 text-sm">Activez JavaScript pour saisir vos vœux.</p>
+    </noscript>
+    <script src="config.js"></script>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

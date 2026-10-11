@@ -1,0 +1,1182 @@
+[
+  {
+    "nom": "Gautheron",
+    "prenom": "Capucine",
+    "email": "capucine.gautheron@hec.edu",
+    "magasin": "Alesia",
+    "ville": "PARIS",
+    "zone": "DIF01",
+    "temps": 23,
+    "arrivee": "08:54"
+  },
+  {
+    "nom": "Sonnendrucker",
+    "prenom": "Marie",
+    "email": "marie.sonnendrucker@hec.edu",
+    "magasin": "Alesia",
+    "ville": "PARIS",
+    "zone": "DIF01",
+    "temps": 14,
+    "arrivee": "08:54"
+  },
+  {
+    "nom": "Bouagou",
+    "prenom": "Nadine",
+    "email": "nadine.bouagou@hec.edu",
+    "magasin": "Arcueil",
+    "ville": "ARCUEIL",
+    "zone": "DIF02",
+    "temps": 36,
+    "arrivee": "08:43"
+  },
+  {
+    "nom": "Lemoine",
+    "prenom": "Victor",
+    "email": "victor.lemoine@hec.edu",
+    "magasin": "Arcueil",
+    "ville": "ARCUEIL",
+    "zone": "DIF02",
+    "temps": 16,
+    "arrivee": ""
+  },
+  {
+    "nom": "Ryckewaert",
+    "prenom": "Pierre",
+    "email": "pierre.ryckewaert@hec.edu",
+    "magasin": "Arcueil",
+    "ville": "ARCUEIL",
+    "zone": "DIF02",
+    "temps": 31,
+    "arrivee": "08:43"
+  },
+  {
+    "nom": "Steiner",
+    "prenom": "Anna",
+    "email": "anna.steiner@hec.edu",
+    "magasin": "Arcueil",
+    "ville": "ARCUEIL",
+    "zone": "DIF02",
+    "temps": 39,
+    "arrivee": "08:42"
+  },
+  {
+    "nom": "Duha",
+    "prenom": "Baptiste",
+    "email": "baptuste.duha@hec.edu",
+    "magasin": "Batignolles",
+    "ville": "PARIS",
+    "zone": "DIF03",
+    "temps": 11,
+    "arrivee": "08:53"
+  },
+  {
+    "nom": "Penone",
+    "prenom": "Sobel",
+    "email": "sobel.penone@hec.edu",
+    "magasin": "Batignolles",
+    "ville": "PARIS",
+    "zone": "DIF03",
+    "temps": 1,
+    "arrivee": ""
+  },
+  {
+    "nom": "MERLE",
+    "prenom": "Timothé",
+    "email": "timothe.merle@hec.edu",
+    "magasin": "Beaugrenelle",
+    "ville": "PARIS",
+    "zone": "DIF02",
+    "temps": 17,
+    "arrivee": "08:48"
+  },
+  {
+    "nom": "Miserolle",
+    "prenom": "William",
+    "email": "william.miserolle@hec.edu",
+    "magasin": "Beaugrenelle",
+    "ville": "PARIS",
+    "zone": "DIF02",
+    "temps": 8,
+    "arrivee": ""
+  },
+  {
+    "nom": "Petit",
+    "prenom": "Anaeve",
+    "email": "anaeve.petit@hec.edu",
+    "magasin": "Beaugrenelle",
+    "ville": "PARIS",
+    "zone": "DIF02",
+    "temps": 7,
+    "arrivee": ""
+  },
+  {
+    "nom": "Rat",
+    "prenom": "Antonin",
+    "email": "antonin.rat@hec.edu",
+    "magasin": "Beaugrenelle",
+    "ville": "PARIS",
+    "zone": "DIF02",
+    "temps": 10,
+    "arrivee": ""
+  },
+  {
+    "nom": "Gesland",
+    "prenom": "Hugo",
+    "email": "hugo.gesland@hec.edu",
+    "magasin": "Belleville",
+    "ville": "PARIS",
+    "zone": "DIF04",
+    "temps": 18,
+    "arrivee": "08:54"
+  },
+  {
+    "nom": "Lévy",
+    "prenom": "Lazare",
+    "email": "lazare.levy@hec.edu",
+    "magasin": "Belleville",
+    "ville": "PARIS",
+    "zone": "DIF04",
+    "temps": 10,
+    "arrivee": "08:55"
+  },
+  {
+    "nom": "Molé",
+    "prenom": "Alexandre",
+    "email": "alexandre.mole@hec.edu",
+    "magasin": "Belleville",
+    "ville": "PARIS",
+    "zone": "DIF04",
+    "temps": 18,
+    "arrivee": "08:54"
+  },
+  {
+    "nom": "Monteyne",
+    "prenom": "Alix",
+    "email": "alix.monteyne@hec.edu",
+    "magasin": "Belleville",
+    "ville": "PARIS",
+    "zone": "DIF04",
+    "temps": 18,
+    "arrivee": "08:54"
+  },
+  {
+    "nom": "Banide",
+    "prenom": "Christian",
+    "email": "christian.banide@hec.edu",
+    "magasin": "Bnf",
+    "ville": "PARIS",
+    "zone": "DIF01",
+    "temps": 39,
+    "arrivee": "08:41"
+  },
+  {
+    "nom": "Comiti",
+    "prenom": "Santinu",
+    "email": "santinu.comiti@hec.edu",
+    "magasin": "Bnf",
+    "ville": "PARIS",
+    "zone": "DIF01",
+    "temps": 25,
+    "arrivee": "08:54"
+  },
+  {
+    "nom": "de Lambertye",
+    "prenom": "Eléonore",
+    "email": "eleonore.de-lambertye@hec.edu",
+    "magasin": "Bnf",
+    "ville": "PARIS",
+    "zone": "DIF01",
+    "temps": 25,
+    "arrivee": "08:54"
+  },
+  {
+    "nom": "Perroquin",
+    "prenom": "Cyrille",
+    "email": "cyrille.perroquin@hec.edu",
+    "magasin": "Bnf",
+    "ville": "PARIS",
+    "zone": "DIF01",
+    "temps": 32,
+    "arrivee": "08:41"
+  },
+  {
+    "nom": "Boyon",
+    "prenom": "Yannis",
+    "email": "yannis.boyon@hec.edu",
+    "magasin": "Bondy",
+    "ville": "BONDY",
+    "zone": "DIF04",
+    "temps": 42,
+    "arrivee": "08:21"
+  },
+  {
+    "nom": "GROSSIN",
+    "prenom": "Mathieu",
+    "email": "mathieu.grossin@hec.edu",
+    "magasin": "Bondy",
+    "ville": "BONDY",
+    "zone": "DIF04",
+    "temps": 42,
+    "arrivee": "08:21"
+  },
+  {
+    "nom": "Lamarre",
+    "prenom": "Daphné",
+    "email": "daphne.lamarre@hec.edu",
+    "magasin": "Bondy",
+    "ville": "BONDY",
+    "zone": "DIF04",
+    "temps": 42,
+    "arrivee": "08:21"
+  },
+  {
+    "nom": "Lesne",
+    "prenom": "Douglas",
+    "email": "douglas.lesne@hec.edu",
+    "magasin": "Bondy",
+    "ville": "BONDY",
+    "zone": "DIF04",
+    "temps": 42,
+    "arrivee": "08:21"
+  },
+  {
+    "nom": "Adikarigethamel",
+    "prenom": "Raindu Samitha",
+    "email": "raindu.adikarigethamel@hec.edu",
+    "magasin": "Bonneuil",
+    "ville": "BONNEUIL SUR MARNE",
+    "zone": "DIF01",
+    "temps": 52,
+    "arrivee": "08:57"
+  },
+  {
+    "nom": "Moor",
+    "prenom": "Raphael",
+    "email": "raphael.moor@hec.edu",
+    "magasin": "Bonneuil",
+    "ville": "BONNEUIL SUR MARNE",
+    "zone": "DIF01",
+    "temps": 51,
+    "arrivee": "08:57"
+  },
+  {
+    "nom": "Amour",
+    "prenom": "Léoold",
+    "email": "leopold.amour@hec.edu",
+    "magasin": "Boulogne",
+    "ville": "BOULOGNE BILLANCOURT",
+    "zone": "DIF02",
+    "temps": 11,
+    "arrivee": ""
+  },
+  {
+    "nom": "Corel",
+    "prenom": "Zoé",
+    "email": "zoe.corel@hec.edu",
+    "magasin": "Boulogne",
+    "ville": "BOULOGNE BILLANCOURT",
+    "zone": "DIF02",
+    "temps": 11,
+    "arrivee": "08:56"
+  },
+  {
+    "nom": "MARTIN",
+    "prenom": "Nicolas",
+    "email": "nicolas.martin@hec.edu",
+    "magasin": "Boulogne",
+    "ville": "BOULOGNE BILLANCOURT",
+    "zone": "DIF02",
+    "temps": 6,
+    "arrivee": ""
+  },
+  {
+    "nom": "Nora",
+    "prenom": "Anthony",
+    "email": "anthony.nora@hec.edu",
+    "magasin": "Boulogne",
+    "ville": "BOULOGNE BILLANCOURT",
+    "zone": "DIF02",
+    "temps": 10,
+    "arrivee": "08:56"
+  },
+  {
+    "nom": "Charrier",
+    "prenom": "Ines",
+    "email": "ines.charrier@hec.edu",
+    "magasin": "Chatillon",
+    "ville": "CHATILLON",
+    "zone": "DIF02",
+    "temps": 27,
+    "arrivee": "08:49"
+  },
+  {
+    "nom": "Kolly",
+    "prenom": "Tanguy",
+    "email": "tanguy.kolly@hec.edu",
+    "magasin": "Chatillon",
+    "ville": "CHATILLON",
+    "zone": "DIF02",
+    "temps": 27,
+    "arrivee": "08:49"
+  },
+  {
+    "nom": "Marinosy Badouraly",
+    "prenom": "Ichane",
+    "email": "ichane.marinosy-badouraly@hec.edu",
+    "magasin": "Chatillon",
+    "ville": "CHATILLON",
+    "zone": "DIF02",
+    "temps": 18,
+    "arrivee": "08:55"
+  },
+  {
+    "nom": "Perrier",
+    "prenom": "Rémi",
+    "email": "remi.perrier@hec.edu",
+    "magasin": "Chatillon",
+    "ville": "CHATILLON",
+    "zone": "DIF02",
+    "temps": 17,
+    "arrivee": "08:51"
+  },
+  {
+    "nom": "Develay",
+    "prenom": "Antoine",
+    "email": "antoine.develay@hec.edu",
+    "magasin": "Creteil",
+    "ville": "CRETEIL",
+    "zone": "DIF01",
+    "temps": 45,
+    "arrivee": "08:57"
+  },
+  {
+    "nom": "Minvielle",
+    "prenom": "Jean-Baptiste",
+    "email": "jean-baptiste.minvielle@hec.edu",
+    "magasin": "Creteil",
+    "ville": "CRETEIL",
+    "zone": "DIF01",
+    "temps": 40,
+    "arrivee": "08:57"
+  },
+  {
+    "nom": "ORANGE",
+    "prenom": "Amaury",
+    "email": "amaury.orange@hec.edu",
+    "magasin": "Creteil",
+    "ville": "CRETEIL",
+    "zone": "DIF01",
+    "temps": 41,
+    "arrivee": "08:57"
+  },
+  {
+    "nom": "Toledano",
+    "prenom": "Gabriel",
+    "email": "gabriel.toledano@hec.edu",
+    "magasin": "Creteil",
+    "ville": "CRETEIL",
+    "zone": "DIF01",
+    "temps": 52,
+    "arrivee": "08:45"
+  },
+  {
+    "nom": "Bentaleb",
+    "prenom": "Mamoun",
+    "email": "mamoun.bentaleb@hec.edu",
+    "magasin": "Forum",
+    "ville": "PARIS",
+    "zone": "DIF01",
+    "temps": 22,
+    "arrivee": "08:57"
+  },
+  {
+    "nom": "BERKA",
+    "prenom": "Thawben",
+    "email": "thawben.berka@hec.edu",
+    "magasin": "Forum",
+    "ville": "PARIS",
+    "zone": "DIF01",
+    "temps": 15,
+    "arrivee": "08:57"
+  },
+  {
+    "nom": "LE FRANC",
+    "prenom": "Adélaïde",
+    "email": "le-franc.adelaide@hec.edu",
+    "magasin": "Forum",
+    "ville": "PARIS",
+    "zone": "DIF01",
+    "temps": 11,
+    "arrivee": "08:55"
+  },
+  {
+    "nom": "MIHIGO",
+    "prenom": "Moralie",
+    "email": "moralie.mihigo@hec.edu",
+    "magasin": "Forum",
+    "ville": "PARIS",
+    "zone": "DIF01",
+    "temps": 22,
+    "arrivee": "08:52"
+  },
+  {
+    "nom": "Honoré",
+    "prenom": "Louis",
+    "email": "louis.honore@hec.edu",
+    "magasin": "Fresnes",
+    "ville": "FRESNES",
+    "zone": "DIF02",
+    "temps": 50,
+    "arrivee": "08:30"
+  },
+  {
+    "nom": "Lebel",
+    "prenom": "Eva",
+    "email": "eva.lebel-belinguier@hec.edu",
+    "magasin": "Fresnes",
+    "ville": "FRESNES",
+    "zone": "DIF02",
+    "temps": 37,
+    "arrivee": "08:53"
+  },
+  {
+    "nom": "Rabadeux",
+    "prenom": "Elena",
+    "email": "elena.rabadeux@hec.edu",
+    "magasin": "Fresnes",
+    "ville": "FRESNES",
+    "zone": "DIF02",
+    "temps": 47,
+    "arrivee": "08:30"
+  },
+  {
+    "nom": "ROMATET",
+    "prenom": "Maxime",
+    "email": "maxime.romatet@hec.edu",
+    "magasin": "Fresnes",
+    "ville": "FRESNES",
+    "zone": "DIF02",
+    "temps": 48,
+    "arrivee": "08:53"
+  },
+  {
+    "nom": "Bou Rached",
+    "prenom": "Mary",
+    "email": "mary.bou-rached@hec.edu",
+    "magasin": "Gennevilliers",
+    "ville": "GENNEVILLIERS",
+    "zone": "DIF03",
+    "temps": 50,
+    "arrivee": "08:37"
+  },
+  {
+    "nom": "Flachaire",
+    "prenom": "Rémi",
+    "email": "remi.flachaire@hec.edu",
+    "magasin": "Gennevilliers",
+    "ville": "GENNEVILLIERS",
+    "zone": "DIF03",
+    "temps": 36,
+    "arrivee": "08:37"
+  },
+  {
+    "nom": "Gentil",
+    "prenom": "Solene",
+    "email": "solene.gentil@hec.edu",
+    "magasin": "Gennevilliers",
+    "ville": "GENNEVILLIERS",
+    "zone": "DIF03",
+    "temps": 37,
+    "arrivee": "08:49"
+  },
+  {
+    "nom": "Gosselin",
+    "prenom": "Matéo",
+    "email": "mateo.gosselin@hec.edu",
+    "magasin": "Gennevilliers",
+    "ville": "GENNEVILLIERS",
+    "zone": "DIF03",
+    "temps": 51,
+    "arrivee": "08:37"
+  },
+  {
+    "nom": "Chantereau",
+    "prenom": "Corentin",
+    "email": "corentin.chantereau@hec.edu",
+    "magasin": "La Défense",
+    "ville": "PUTEAUX",
+    "zone": "DIF02",
+    "temps": 28,
+    "arrivee": "08:47"
+  },
+  {
+    "nom": "Rendu",
+    "prenom": "Valentine",
+    "email": "valentine.rendu@hec.edu",
+    "magasin": "La Défense",
+    "ville": "PUTEAUX",
+    "zone": "DIF02",
+    "temps": 15,
+    "arrivee": "08:57"
+  },
+  {
+    "nom": "Salama",
+    "prenom": "Joachim",
+    "email": "joachim.salama@hec.edu",
+    "magasin": "La Défense",
+    "ville": "PUTEAUX",
+    "zone": "DIF02",
+    "temps": 24,
+    "arrivee": "08:57"
+  },
+  {
+    "nom": "Zaoui",
+    "prenom": "Ella",
+    "email": "ella.zaoui@hec.edu",
+    "magasin": "La Défense",
+    "ville": "PUTEAUX",
+    "zone": "DIF02",
+    "temps": 30,
+    "arrivee": "08:46"
+  },
+  {
+    "nom": "Deslandes",
+    "prenom": "Alexandra",
+    "email": "alexandra.deslandes@hec.edu",
+    "magasin": "Madeleine",
+    "ville": "PARIS",
+    "zone": "DIF04",
+    "temps": 12,
+    "arrivee": "08:53"
+  },
+  {
+    "nom": "Faye",
+    "prenom": "Alex",
+    "email": "alexandre.viale@hec.edu",
+    "magasin": "Madeleine",
+    "ville": "PARIS",
+    "zone": "DIF04",
+    "temps": 19,
+    "arrivee": "08:57"
+  },
+  {
+    "nom": "Henninot",
+    "prenom": "Simon",
+    "email": "simon.henninot@hec.edu",
+    "magasin": "Madeleine",
+    "ville": "PARIS",
+    "zone": "DIF04",
+    "temps": 4,
+    "arrivee": ""
+  },
+  {
+    "nom": "Revelli",
+    "prenom": "Luigi",
+    "email": "luigi.revelli-caracciolo@hec.edu",
+    "magasin": "Madeleine",
+    "ville": "PARIS",
+    "zone": "DIF04",
+    "temps": 10,
+    "arrivee": "08:57"
+  },
+  {
+    "nom": "Leclercq",
+    "prenom": "Pauline",
+    "email": "pauline.leclercq@hec.edu",
+    "magasin": "Montparnasse",
+    "ville": "PARIS",
+    "zone": "DIF01",
+    "temps": 2,
+    "arrivee": ""
+  },
+  {
+    "nom": "Liberatore",
+    "prenom": "Enzo",
+    "email": "enzo.liberatore@hec.edu",
+    "magasin": "Montparnasse",
+    "ville": "PARIS",
+    "zone": "DIF01",
+    "temps": 7,
+    "arrivee": "08:49"
+  },
+  {
+    "nom": "Rapoport",
+    "prenom": "Thomas",
+    "email": "thomas.rapoport@hec.edu",
+    "magasin": "Montparnasse",
+    "ville": "PARIS",
+    "zone": "DIF01",
+    "temps": 14,
+    "arrivee": "08:53"
+  },
+  {
+    "nom": "Ribadeau-Dumas",
+    "prenom": "Manon",
+    "email": "manon.ribadeau-dumas@hec.edu",
+    "magasin": "Montparnasse",
+    "ville": "PARIS",
+    "zone": "DIF01",
+    "temps": 9,
+    "arrivee": "08:48"
+  },
+  {
+    "nom": "Bakhtiari",
+    "prenom": "Camran",
+    "email": "camran-camille-olympe.bakhtiari@hec.edu",
+    "magasin": "Nation",
+    "ville": "PARIS",
+    "zone": "DIF04",
+    "temps": 19,
+    "arrivee": "08:53"
+  },
+  {
+    "nom": "Combastet",
+    "prenom": "Paolo",
+    "email": "paolo.combastet@hec.edu",
+    "magasin": "Nation",
+    "ville": "PARIS",
+    "zone": "DIF04",
+    "temps": 29,
+    "arrivee": "08:53"
+  },
+  {
+    "nom": "De Clercq",
+    "prenom": "Cyril",
+    "email": "cyril.de-clercq@hec.edu",
+    "magasin": "Nation",
+    "ville": "PARIS",
+    "zone": "DIF04",
+    "temps": 22,
+    "arrivee": "08:53"
+  },
+  {
+    "nom": "Deroide",
+    "prenom": "Albane",
+    "email": "albane.deroide@hec.edu",
+    "magasin": "Nation",
+    "ville": "PARIS",
+    "zone": "DIF04",
+    "temps": 17,
+    "arrivee": "08:53"
+  },
+  {
+    "nom": "Jallot",
+    "prenom": "Agathe",
+    "email": "agathe.jallot@hec.edu",
+    "magasin": "Orgeval",
+    "ville": "VILLENNES SUR SEINE",
+    "zone": "DIF03",
+    "temps": 46,
+    "arrivee": "07:38"
+  },
+  {
+    "nom": "Prevosteau",
+    "prenom": "Etienne",
+    "email": "etienne.prevosteau@hec.edu",
+    "magasin": "Orgeval",
+    "ville": "VILLENNES SUR SEINE",
+    "zone": "DIF03",
+    "temps": 45,
+    "arrivee": "07:02"
+  },
+  {
+    "nom": "Roman",
+    "prenom": "Elisa",
+    "email": "elisa.roman@hec.edu",
+    "magasin": "Orgeval",
+    "ville": "VILLENNES SUR SEINE",
+    "zone": "DIF03",
+    "temps": 51,
+    "arrivee": "07:02"
+  },
+  {
+    "nom": "Basse",
+    "prenom": "Victoire",
+    "email": "victoire.basse@hec.edu",
+    "magasin": "Ormesson",
+    "ville": "CHENNEVIERES SUR MARNE",
+    "zone": "DIF01",
+    "temps": 32,
+    "arrivee": "08:45"
+  },
+  {
+    "nom": "Vieira",
+    "prenom": "André",
+    "email": "andre.vieira@hec.edu",
+    "magasin": "Ormesson",
+    "ville": "CHENNEVIERES SUR MARNE",
+    "zone": "DIF01",
+    "temps": 33,
+    "arrivee": "08:45"
+  },
+  {
+    "nom": "Guinet",
+    "prenom": "Clément",
+    "email": "clement.guinet@hec.edu",
+    "magasin": "Parinor",
+    "ville": "AULNAY SOUS BOIS",
+    "zone": "DIF04",
+    "temps": 52,
+    "arrivee": "08:52"
+  },
+  {
+    "nom": "Tighilt",
+    "prenom": "Mouloud",
+    "email": "mouloud.tighilt@hec.edu",
+    "magasin": "Parinor",
+    "ville": "AULNAY SOUS BOIS",
+    "zone": "DIF04",
+    "temps": 42,
+    "arrivee": "08:45"
+  },
+  {
+    "nom": "CARVILLE",
+    "prenom": "Gabrielle",
+    "email": "gabrielle.carville@hec.edu",
+    "magasin": "Parly 2",
+    "ville": "LE CHESNAY",
+    "zone": "DIF02",
+    "temps": 45,
+    "arrivee": "08:39"
+  },
+  {
+    "nom": "CATEZ",
+    "prenom": "Nicolas",
+    "email": "nicolas.catez@hec.edu",
+    "magasin": "Parly 2",
+    "ville": "LE CHESNAY",
+    "zone": "DIF02",
+    "temps": 53,
+    "arrivee": "08:39"
+  },
+  {
+    "nom": "Goix",
+    "prenom": "Anais",
+    "email": "anais.goix@hec.edu",
+    "magasin": "Parly 2",
+    "ville": "LE CHESNAY",
+    "zone": "DIF02",
+    "temps": 37,
+    "arrivee": "07:54"
+  },
+  {
+    "nom": "Trepat-Marti",
+    "prenom": "Anna",
+    "email": "anna.trepat-marti@hec.edu",
+    "magasin": "Parly 2",
+    "ville": "LE CHESNAY",
+    "zone": "DIF02",
+    "temps": 40,
+    "arrivee": "07:40"
+  },
+  {
+    "nom": "Bazarna",
+    "prenom": "Anna",
+    "email": "anna.bazarna@hec.edu",
+    "magasin": "Passy2",
+    "ville": "PARIS",
+    "zone": "DIF02",
+    "temps": 3,
+    "arrivee": ""
+  },
+  {
+    "nom": "Rousselet",
+    "prenom": "Théo",
+    "email": "theo.rousselet@hec.edu",
+    "magasin": "Passy2",
+    "ville": "PARIS",
+    "zone": "DIF02",
+    "temps": 8,
+    "arrivee": ""
+  },
+  {
+    "nom": "Durand",
+    "prenom": "Antoine",
+    "email": "antoine.durand@hec.edu",
+    "magasin": "Plaisir",
+    "ville": "PLAISIR",
+    "zone": "DIF02",
+    "temps": 52,
+    "arrivee": "08:17"
+  },
+  {
+    "nom": "Hmamed",
+    "prenom": "Mohammed",
+    "email": "mohammed.hmamed@hec.edu",
+    "magasin": "Plaisir",
+    "ville": "PLAISIR",
+    "zone": "DIF02",
+    "temps": 52,
+    "arrivee": "07:27"
+  },
+  {
+    "nom": "Jacomino",
+    "prenom": "Louis",
+    "email": "louis.jacomino@hec.edu",
+    "magasin": "Plaisir",
+    "ville": "PLAISIR",
+    "zone": "DIF02",
+    "temps": 53,
+    "arrivee": "08:41"
+  },
+  {
+    "nom": "TONNELIER",
+    "prenom": "Ingrid",
+    "email": "ingrid.tonnelier@hec.edu",
+    "magasin": "Plaisir",
+    "ville": "PLAISIR",
+    "zone": "DIF02",
+    "temps": 41,
+    "arrivee": "08:47"
+  },
+  {
+    "nom": "Corvaisier",
+    "prenom": "Thomas",
+    "email": "thomas.corvaisier@hec.edu",
+    "magasin": "Republique",
+    "ville": "PARIS",
+    "zone": "DIF04",
+    "temps": 7,
+    "arrivee": ""
+  },
+  {
+    "nom": "Lasar",
+    "prenom": "Natan",
+    "email": "natan.lasar@hec.edu",
+    "magasin": "Republique",
+    "ville": "PARIS",
+    "zone": "DIF04",
+    "temps": 8,
+    "arrivee": "08:56"
+  },
+  {
+    "nom": "Schwartz",
+    "prenom": "Justine",
+    "email": "justine.schwartz@hec.edu",
+    "magasin": "Republique",
+    "ville": "PARIS",
+    "zone": "DIF04",
+    "temps": 9,
+    "arrivee": "08:47"
+  },
+  {
+    "nom": "Vallée",
+    "prenom": "Baptiste",
+    "email": "baptiste.vallee@hec.edu",
+    "magasin": "Republique",
+    "ville": "PARIS",
+    "zone": "DIF04",
+    "temps": 8,
+    "arrivee": ""
+  },
+  {
+    "nom": "de Saint Sernin",
+    "prenom": "Axelle",
+    "email": "axelle.de-saint-sernin@hec.edu",
+    "magasin": "Rosny",
+    "ville": "ROSNY SOUS BOIS",
+    "zone": "DIF04",
+    "temps": 34,
+    "arrivee": "08:38"
+  },
+  {
+    "nom": "Mas",
+    "prenom": "Damien",
+    "email": "damien.mas@hec.edu",
+    "magasin": "Rosny",
+    "ville": "ROSNY SOUS BOIS",
+    "zone": "DIF04",
+    "temps": 44,
+    "arrivee": "08:38"
+  },
+  {
+    "nom": "Seiller",
+    "prenom": "Arthur",
+    "email": "arthur.seiller@hec.edu",
+    "magasin": "Rosny",
+    "ville": "ROSNY SOUS BOIS",
+    "zone": "DIF04",
+    "temps": 45,
+    "arrivee": "08:38"
+  },
+  {
+    "nom": "Wolff",
+    "prenom": "Eve",
+    "email": "eve.wolff@hec.edu",
+    "magasin": "Rosny",
+    "ville": "ROSNY SOUS BOIS",
+    "zone": "DIF04",
+    "temps": 38,
+    "arrivee": "08:38"
+  },
+  {
+    "nom": "Eynaud",
+    "prenom": "Eva",
+    "email": "eva.eynaud@hec.edu",
+    "magasin": "Rungis",
+    "ville": "THIAIS",
+    "zone": "DIF02",
+    "temps": 42,
+    "arrivee": "08:39"
+  },
+  {
+    "nom": "Gordet",
+    "prenom": "Marie",
+    "email": "marie.gordet@hec.edu",
+    "magasin": "Rungis",
+    "ville": "THIAIS",
+    "zone": "DIF02",
+    "temps": 31,
+    "arrivee": "08:44"
+  },
+  {
+    "nom": "Krieger",
+    "prenom": "Léane",
+    "email": "leane.krieger@hec.edu",
+    "magasin": "Rungis",
+    "ville": "THIAIS",
+    "zone": "DIF02",
+    "temps": 46,
+    "arrivee": "08:44"
+  },
+  {
+    "nom": "Pelissier",
+    "prenom": "Simon",
+    "email": "simon-niels-oscar.pelissier@hec.edu",
+    "magasin": "Rungis",
+    "ville": "THIAIS",
+    "zone": "DIF02",
+    "temps": 43,
+    "arrivee": "08:36"
+  },
+  {
+    "nom": "Chauveau",
+    "prenom": "Renan",
+    "email": "renan.chauveau@hec.edu",
+    "magasin": "Saint Ouen",
+    "ville": "PARIS",
+    "zone": "DIF03",
+    "temps": 11,
+    "arrivee": "08:54"
+  },
+  {
+    "nom": "Jean-Philippe",
+    "prenom": "Barrere",
+    "email": "jean-philippe.barrere@hec.edu",
+    "magasin": "Saint Ouen",
+    "ville": "PARIS",
+    "zone": "DIF03",
+    "temps": 6,
+    "arrivee": ""
+  },
+  {
+    "nom": "Kebe",
+    "prenom": "Salim",
+    "email": "salim.kebe@hec.edu",
+    "magasin": "Saint Ouen",
+    "ville": "PARIS",
+    "zone": "DIF03",
+    "temps": 20,
+    "arrivee": "08:54"
+  },
+  {
+    "nom": "Reuzenaar",
+    "prenom": "Sophie",
+    "email": "sophie.reuzenaar@hec.edu",
+    "magasin": "Saint Ouen",
+    "ville": "PARIS",
+    "zone": "DIF03",
+    "temps": 6,
+    "arrivee": ""
+  },
+  {
+    "nom": "Basile",
+    "prenom": "Chaix de Lavarène",
+    "email": "basile.chaix-de-lavarene@hec.edu",
+    "magasin": "Sartrouville",
+    "ville": "SARTROUVILLE",
+    "zone": "DIF03",
+    "temps": 49,
+    "arrivee": "08:34"
+  },
+  {
+    "nom": "Dietrich",
+    "prenom": "Julia",
+    "email": "julia.dietrich@hec.edu",
+    "magasin": "Sartrouville",
+    "ville": "SARTROUVILLE",
+    "zone": "DIF03",
+    "temps": 45,
+    "arrivee": "08:53"
+  },
+  {
+    "nom": "Gonand",
+    "prenom": "Augustin",
+    "email": "augustin.gonand@hec.edu",
+    "magasin": "Sartrouville",
+    "ville": "SARTROUVILLE",
+    "zone": "DIF03",
+    "temps": 50,
+    "arrivee": "08:53"
+  },
+  {
+    "nom": "Löning",
+    "prenom": "François",
+    "email": "francois.loning@hec.edu",
+    "magasin": "Sartrouville",
+    "ville": "SARTROUVILLE",
+    "zone": "DIF03",
+    "temps": 48,
+    "arrivee": "08:51"
+  },
+  {
+    "nom": "Fevelat",
+    "prenom": "Pierre-Marie",
+    "email": "pierre-marie.fevelat@hec.edu",
+    "magasin": "St Brice",
+    "ville": "ST BRICE SOUS FORET",
+    "zone": "DIF03",
+    "temps": 43,
+    "arrivee": "07:37"
+  },
+  {
+    "nom": "GREGORI",
+    "prenom": "Thibaud",
+    "email": "thibaud.gregori@hec.edu",
+    "magasin": "St Brice",
+    "ville": "ST BRICE SOUS FORET",
+    "zone": "DIF03",
+    "temps": 50,
+    "arrivee": "07:37"
+  },
+  {
+    "nom": "POTIÉ",
+    "prenom": "Valentin",
+    "email": "valentin.potie@hec.edu",
+    "magasin": "St Brice",
+    "ville": "ST BRICE SOUS FORET",
+    "zone": "DIF03",
+    "temps": 49,
+    "arrivee": "08:33"
+  },
+  {
+    "nom": "Schretlen",
+    "prenom": "Olivier",
+    "email": "olivier.schretlen@hec.edu",
+    "magasin": "St Brice",
+    "ville": "ST BRICE SOUS FORET",
+    "zone": "DIF03",
+    "temps": 43,
+    "arrivee": "07:37"
+  },
+  {
+    "nom": "Amine",
+    "prenom": "Alexandre",
+    "email": "alexandre.amine@hec.edu",
+    "magasin": "Ternes",
+    "ville": "PARIS",
+    "zone": "DIF03",
+    "temps": 15,
+    "arrivee": "08:52"
+  },
+  {
+    "nom": "Jaber",
+    "prenom": "Kevan",
+    "email": "kevan.jaber@hec.edu",
+    "magasin": "Ternes",
+    "ville": "PARIS",
+    "zone": "DIF03",
+    "temps": 16,
+    "arrivee": "08:52"
+  },
+  {
+    "nom": "Lee",
+    "prenom": "Matthias",
+    "email": "matthias.lee@hec.edu",
+    "magasin": "Ternes",
+    "ville": "PARIS",
+    "zone": "DIF03",
+    "temps": 6,
+    "arrivee": "08:55"
+  },
+  {
+    "nom": "Sedrati",
+    "prenom": "Abla",
+    "email": "abla.sedrati@hec.edu",
+    "magasin": "Ternes",
+    "ville": "PARIS",
+    "zone": "DIF03",
+    "temps": 13,
+    "arrivee": "08:52"
+  },
+  {
+    "nom": "fayed",
+    "prenom": "al rashid",
+    "email": "fayed.al-rashid@hec.edu",
+    "magasin": "Torcy",
+    "ville": "MARNE LA VALLEE",
+    "zone": "DIF04",
+    "temps": 44,
+    "arrivee": "08:41"
+  },
+  {
+    "nom": "Nauroy",
+    "prenom": "Charles",
+    "email": "charles.nauroy@hec.edu",
+    "magasin": "Torcy",
+    "ville": "MARNE LA VALLEE",
+    "zone": "DIF04",
+    "temps": 53,
+    "arrivee": "08:25"
+  },
+  {
+    "nom": "Silvera",
+    "prenom": "Allan",
+    "email": "allan.silvera@hec.edu",
+    "magasin": "Torcy",
+    "ville": "MARNE LA VALLEE",
+    "zone": "DIF04",
+    "temps": 48,
+    "arrivee": "08:41"
+  },
+  {
+    "nom": "Ayoubi",
+    "prenom": "Ibtiseme",
+    "email": "ibtiseme.ayoubi@hec.edu",
+    "magasin": "Villebon",
+    "ville": "VILLEBON SUR YVETTE",
+    "zone": "DIF02",
+    "temps": 15,
+    "arrivee": "08:52"
+  },
+  {
+    "nom": "Claeysen",
+    "prenom": "Mareva",
+    "email": "mareva.claeysen@hec.edu",
+    "magasin": "Villebon",
+    "ville": "VILLEBON SUR YVETTE",
+    "zone": "DIF02",
+    "temps": 46,
+    "arrivee": "08:25"
+  },
+  {
+    "nom": "Farge",
+    "prenom": "Emma",
+    "email": "emma.farge@hec.edu",
+    "magasin": "Villebon",
+    "ville": "VILLEBON SUR YVETTE",
+    "zone": "DIF02",
+    "temps": 12,
+    "arrivee": "08:53"
+  },
+  {
+    "nom": "Makhoul",
+    "prenom": "Mark",
+    "email": "mark.makhoul@hec.edu",
+    "magasin": "Villebon",
+    "ville": "VILLEBON SUR YVETTE",
+    "zone": "DIF02",
+    "temps": 49,
+    "arrivee": "08:25"
+  }
+]

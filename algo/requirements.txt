@@ -1,0 +1,5 @@
+requests>=2.32
+python-dotenv>=1.0
+openpyxl>=3.1
+pulp>=2.9
+highspy>=1.7

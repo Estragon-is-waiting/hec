@@ -1,0 +1,9 @@
+config.js
+public/
+algo/.env
+algo/cache/
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+node_modules/

@@ -1,0 +1,4 @@
+{
+  "buildCommand": "node scripts/write-config.js",
+  "outputDirectory": "public"
+}

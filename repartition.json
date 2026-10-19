@@ -1178,5 +1178,35 @@
     "zone": "DIF02",
     "temps": 44,
     "arrivee": "08:25"
+  },
+  {
+    "nom": "Sberro",
+    "prenom": "Eliot",
+    "email": "eliot.sberro@hec.edu",
+    "magasin": "Bonneuil",
+    "ville": "BONNEUIL SUR MARNE",
+    "zone": "DIF01",
+    "temps": null,
+    "arrivee": ""
+  },
+  {
+    "nom": "Zenou",
+    "prenom": "Alexandre",
+    "email": "alexandre.zenou@hec.edu",
+    "magasin": "Gennevilliers",
+    "ville": "GENNEVILLIERS",
+    "zone": "DIF03",
+    "temps": null,
+    "arrivee": ""
+  },
+  {
+    "nom": "Lemaire",
+    "prenom": "Flore",
+    "email": "flore.lemaire@hec.edu",
+    "magasin": "Bondy",
+    "ville": "BONDY",
+    "zone": "DIF04",
+    "temps": null,
+    "arrivee": ""
   }
 ]

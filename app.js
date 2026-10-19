@@ -118,6 +118,12 @@ function formatClock(value) {
   return `${Number(match[1])} h ${match[2]}`;
 }
 
+function publishedMinutes(value) {
+  if (value === null || value === undefined || value === "") return null;
+  const number = Number(value);
+  return Number.isFinite(number) ? number : null;
+}
+
 function formatMin(value) {
   if (!Number.isFinite(value)) return "—";
   const rounded = Math.round(value * 10) / 10;
@@ -934,7 +940,7 @@ function renderAssignment() {
     box.innerHTML = `
       <h3 class="font-serif text-2xl">${esc(title)}</h3>
       <p class="mt-1 text-sm text-stone-600">${esc(line)}</p>
-      <p class="mt-4 text-sm">Trajet : <strong>${row.temps} min</strong></p>
+      <p class="mt-4 text-sm">Trajet : <strong>${publishedMinutes(row.temps) === null ? "—" : formatMin(publishedMinutes(row.temps))}</strong></p>
       <p class="text-sm">Arrivée : <strong>${esc(formatClock(row.arrivee))}</strong></p>`;
   });
 }
@@ -967,7 +973,7 @@ function renderConsultation() {
 
 
 function publishedDistribution(rows) {
-  const times = rows.map((row) => Number(row.temps)).filter((value) => Number.isFinite(value));
+  const times = rows.map((row) => publishedMinutes(row.temps)).filter((value) => value !== null);
   const upper = histogramUpper(times);
   const yMax = Math.max(1, ...histogramBins(times, upper).map((bin) => bin.count));
   const body = rows
@@ -978,14 +984,14 @@ function publishedDistribution(rows) {
         <td class="px-3 py-2">${esc(row.magasin)}</td>
         <td class="px-3 py-2">${esc(row.ville)}</td>
         <td class="px-3 py-2">${esc(row.zone)}</td>
-        <td class="px-3 py-2 text-right font-semibold">${row.temps} min</td>
+        <td class="px-3 py-2 text-right font-semibold">${publishedMinutes(row.temps) === null ? "—" : formatMin(publishedMinutes(row.temps))}</td>
         <td class="px-3 py-2">${esc(formatClock(row.arrivee))}</td>
       </tr>`)
     .join("");
   return `
     <section class="mb-8">
       <h2 class="font-serif text-2xl">Une heure</h2>
-      <p class="mt-1 max-w-3xl text-sm text-stone-600">${rows.length} personnes. Le graphique compte les trajets de la colonne Temps, par tranches de 5 minutes.</p>
+      <p class="mt-1 max-w-3xl text-sm text-stone-600">${rows.length} personnes. Le graphique compte les durées renseignées, par tranches de 5 minutes.</p>
       <article class="mt-4 rounded-xl border border-line bg-card p-5">
         ${histogramMarkup(times, upper, yMax)}
       </article>

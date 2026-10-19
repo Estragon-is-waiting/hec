@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Calcule l'affectation qui réduit le pire trajet, puis l'écrit dans Supabase.
 
-Un magasin peut rester vide. S'il reçoit des étudiants, il reste dans sa capacité.
+Au plus cinq magasins restent vides. S'il reçoit des étudiants, un magasin reste dans sa capacité.
+Alésia, Batignolles et Passy accueillent exactement une personne.
 Chaque zone DIF en reçoit au moins 20.
 Les durées viennent du cache Google, arrivée un mardi à 9 h. Le cache Navitia n'est pas lu.
 """
@@ -38,7 +39,6 @@ GOOGLE_RULES = "arrivee-9h-google-transit"
 NAVITIA_URL = "https://prim.iledefrance-mobilites.fr/marketplace/v2/navitia/journeys"
 OSRM_URL = "https://router.project-osrm.org/route/v1/driving"
 ZONES = ("DIF01", "DIF02", "DIF03", "DIF04")
-IDF_DEPTS = {"75", "77", "78", "91", "92", "93", "94", "95"}
 ZONE_MIN = 20
 OUTSIDE_RANK = 99
 NAVITIA_PER_SECOND = 8
@@ -54,7 +54,16 @@ ALGORITHMS = (
 FORCED_STORES = {
     "victoire.basse@hec.edu": ("Ormesson",),
     "andre.vieira@hec.edu": ("Ormesson",),
+    "justine.schwartz@hec.edu": ("Reims",),
+    "valentin.potie@hec.edu": ("Reims",),
 }
+# Effectif imposé, y compris quand la capacité du magasin permettrait davantage.
+EXACT_STORE_COUNTS = {
+    "Alesia": 1,
+    "Batignolles": 1,
+    "Passy2": 1,
+}
+MAX_EMPTY_STORES = 5
 _SOLVER = None
 
 
@@ -636,13 +645,28 @@ def build_model(students, stores, matrix, max_minutes, rank_caps):
             return None
         problem += pulp.lpSum(pinned) == 1, f"place_{i}"
 
+    opened_flags = []
     for j, store in enumerate(stores):
         hosted = [variables[i, j] for i in range(len(students)) if (i, j) in variables]
+        exact = EXACT_STORE_COUNTS.get(store["nom"])
         if not hosted:
+            if exact is not None:
+                return None
             continue
         opened = pulp.LpVariable(f"ouvert_{j}", cat="Binary")
-        problem += pulp.lpSum(hosted) >= store["capacite_min"] * opened, f"cap_min_{j}"
-        problem += pulp.lpSum(hosted) <= store["capacite_max"] * opened, f"cap_max_{j}"
+        opened_flags.append(opened)
+        if exact is None:
+            problem += pulp.lpSum(hosted) >= store["capacite_min"] * opened, f"cap_min_{j}"
+            problem += pulp.lpSum(hosted) <= store["capacite_max"] * opened, f"cap_max_{j}"
+        else:
+            problem += pulp.lpSum(hosted) == exact, f"exact_{j}"
+            problem += opened == 1, f"exact_open_{j}"
+
+    if MAX_EMPTY_STORES is not None:
+        always_empty = len(stores) - len(opened_flags)
+        problem += (
+            always_empty + pulp.lpSum(1 - flag for flag in opened_flags) <= MAX_EMPTY_STORES
+        ), "magasins_vides"
 
     for zone in ZONES:
         indexes = [j for j, store in enumerate(stores) if store["zone"] == zone]
@@ -813,15 +837,24 @@ def validate(assignment: dict[str, int], students: list[dict], stores: list[dict
         per_zone[store["zone"]] += 1
 
     del matrix
+    empty = []
     for store in stores:
         count = per_store.get(store["id"], 0)
+        exact = EXACT_STORE_COUNTS.get(store["nom"])
+        if exact is not None and count != exact:
+            raise SystemExit(f"{store['nom']} reçoit {count} étudiants, au lieu de {exact}.")
         if count == 0:
+            empty.append(store["nom"])
             continue
         if not (store["capacite_min"] <= count <= store["capacite_max"]):
             raise SystemExit(
                 f"{store['nom']} reçoit {count} étudiants, hors de "
                 f"{store['capacite_min']}–{store['capacite_max']}."
             )
+    if MAX_EMPTY_STORES is not None and len(empty) > MAX_EMPTY_STORES:
+        raise SystemExit(
+            f"{len(empty)} magasins vides, au-delà de {MAX_EMPTY_STORES} : {', '.join(empty)}."
+        )
     for zone, count in per_zone.items():
         if count < ZONE_MIN:
             raise SystemExit(f"{zone} reçoit {count} étudiants, moins que le minimum de {ZONE_MIN}.")
@@ -844,8 +877,10 @@ def print_report(title: str, assignment: dict[str, int], students, stores, matri
     print(f"{title}")
     for zone in ZONES:
         print(f"  {zone} : {zones[zone]} étudiants")
+    empty = [store["nom"] for store in stores if store["id"] not in {store_id for store_id in assignment.values()}]
     print(f"  Temps moyen : {sum(times) / len(times):.1f} min, maximum : {max(times)} min")
     print(f"  Étudiants au-delà de 45 min : {over}")
+    print(f"  Magasins vides ({len(empty)}) : {', '.join(empty) if empty else 'aucun'}")
     return over
 
 
@@ -1011,6 +1046,17 @@ def check_family(students, stores, matrix, results) -> None:
 
 
 def self_test() -> None:
+    global MAX_EMPTY_STORES, EXACT_STORE_COUNTS
+    saved_rules = (MAX_EMPTY_STORES, EXACT_STORE_COUNTS)
+    MAX_EMPTY_STORES = None
+    EXACT_STORE_COUNTS = {}
+    try:
+        _self_test()
+    finally:
+        MAX_EMPTY_STORES, EXACT_STORE_COUNTS = saved_rules
+
+
+def _self_test() -> None:
     stores = []
     store_id = 1
     for zone in ZONES:
@@ -1110,13 +1156,7 @@ def main() -> None:
         "magasins",
         "id,nom,zone,code_postal,latitude,longitude,capacite_min,capacite_max",
     )
-    idf_stores = []
-    for row in raw_stores:
-        if str(row["code_postal"])[:2] in IDF_DEPTS:
-            idf_stores.append(row)
-            continue
-        print(f"  Magasin hors Île-de-France retiré : {row['nom']}")
-    stores = normalize_stores(idf_stores)
+    stores = normalize_stores(raw_stores)
     if not students:
         raise SystemExit("Aucun vœu en base.")
     if not stores:
@@ -1124,10 +1164,20 @@ def main() -> None:
 
     print(f"{len(students)} étudiants, {len(stores)} magasins.")
     known = {student["email"] for student in students}
+    store_names = {store["nom"] for store in stores}
     for email, names in FORCED_STORES.items():
         if email not in known:
             raise SystemExit(f"Affectation imposée impossible : {email} n'est pas inscrit.")
+        missing = [name for name in names if name not in store_names]
+        if missing:
+            raise SystemExit(f"Magasin imposé introuvable pour {email} : {', '.join(missing)}.")
         print(f"  {email} est placé à {' ou '.join(names)}.")
+    for name, count in EXACT_STORE_COUNTS.items():
+        if name not in store_names:
+            raise SystemExit(f"Magasin à effectif imposé introuvable : {name}.")
+        print(f"  {name} accueille exactement {count} étudiant.")
+    if MAX_EMPTY_STORES is not None:
+        print(f"  Au plus {MAX_EMPTY_STORES} magasins vides.")
     check_problem_size(students, stores)
 
     when = next_tuesday_0900()

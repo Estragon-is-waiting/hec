@@ -163,11 +163,11 @@
     "nom": "MIHIGO",
     "prenom": "Moralie",
     "email": "moralie.mihigo@hec.edu",
-    "magasin": "Bnf",
-    "ville": "PARIS",
-    "zone": "DIF01",
-    "temps": 25,
-    "arrivee": "08:54"
+    "magasin": "Rungis",
+    "ville": "THIAIS",
+    "zone": "DIF02",
+    "temps": 57,
+    "arrivee": "08:39"
   },
   {
     "nom": "Perroquin",
@@ -943,11 +943,11 @@
     "nom": "Gordet",
     "prenom": "Marie",
     "email": "marie.gordet@hec.edu",
-    "magasin": "Rungis",
-    "ville": "THIAIS",
-    "zone": "DIF02",
-    "temps": 31,
-    "arrivee": "08:44"
+    "magasin": "Villabe",
+    "ville": "VILLABE",
+    "zone": "DIF01",
+    "temps": 71,
+    "arrivee": "08:45"
   },
   {
     "nom": "Pelissier",
@@ -1133,11 +1133,11 @@
     "nom": "Krieger",
     "prenom": "Léane",
     "email": "leane.krieger@hec.edu",
-    "magasin": "Villabe",
-    "ville": "VILLABE",
+    "magasin": "Bnf",
+    "ville": "PARIS",
     "zone": "DIF01",
-    "temps": 78,
-    "arrivee": "08:45"
+    "temps": 17,
+    "arrivee": "08:54"
   },
   {
     "nom": "Ayoubi",
